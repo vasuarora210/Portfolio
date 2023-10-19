@@ -311,5 +311,6 @@
     }
     .pro{
         margin-bottom: 50px;
+        flex-direction: column;
     }
 }
