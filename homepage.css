@@ -298,7 +298,6 @@
     }
     .thanks{
         height: 15vh;
-        margin-top: -3vh;
         font-size: small;
     }
     .footer{
@@ -309,5 +308,8 @@
     }
     .contact{
         margin-top: -30vh;
+    }
+    .pro{
+        margin-bottom: 50px;
     }
 }
