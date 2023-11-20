@@ -220,6 +220,10 @@
         background-image: url("./img/atc.png");
         background-size: cover;
     }
+    #ts{
+        background-image: url("./img/timer.png");
+        background-size: cover;
+    }
     /*  */
 
 /* Footer */
