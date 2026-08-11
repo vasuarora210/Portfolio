@@ -315,65 +315,61 @@
     }
 }
 
-/* =========================================
-   FOOTER / CONTACT
-========================================= */
+/* ==========================================
+   NEW PORTFOLIO FOOTER
+   ========================================== */
 
-footer {
-    position: relative;
+.site-footer {
+    width: 100%;
+    box-sizing: border-box;
 
     background: #7000ff;
-
-    padding: 70px 8% 35px;
-
     color: white;
 
-    overflow: hidden;
+    padding: 70px 8% 30px;
+
+    text-align: center;
+
+    position: relative;
 }
 
 
-/* -------------------------
-   MAIN HEADING
-------------------------- */
+/* ---------- TITLE ---------- */
 
-.thanks {
+.site-footer-title {
     width: 100%;
     max-width: 1200px;
 
     margin: 0 auto 70px;
 
-    padding: 32px 40px;
+    padding: 30px 25px;
+
+    box-sizing: border-box;
 
     background: #151d3b;
 
     border-radius: 35px;
-
-    text-align: center;
-
-    box-sizing: border-box;
 }
 
 
-.thanks h1 {
+.site-footer-title h1 {
     margin: 0;
 
-    font-size: clamp(32px, 4vw, 64px);
+    color: white;
 
-    line-height: 1.1;
+    font-size: 55px;
+
+    line-height: 1.15;
 
     font-weight: 700;
-
-    color: white;
 }
 
 
-/* -------------------------
-   FOOTER CONTENT
-------------------------- */
+/* ---------- CONTENT ---------- */
 
-.footer-content {
-
-    max-width: 1100px;
+.site-footer-content {
+    width: 100%;
+    max-width: 900px;
 
     margin: 0 auto;
 
@@ -383,56 +379,44 @@ footer {
 
     align-items: center;
 
-    text-align: center;
+    justify-content: center;
 
-    gap: 30px;
+    gap: 25px;
 }
 
 
-/* -------------------------
-   LOGO
-------------------------- */
+/* ---------- LOGO ---------- */
 
-.footer-logo img {
-
-    width: 70px;
-
-    height: 70px;
+.site-footer-logo {
+    width: 65px !important;
+    height: 65px !important;
 
     object-fit: contain;
 
-    margin: 0;
+    margin: 0 !important;
 }
 
 
-/* -------------------------
-   CONTACT
-------------------------- */
+/* ---------- INTRO ---------- */
 
-.contact {
+.site-footer-intro {
+    margin: 15px 0 0 !important;
 
-    width: 100%;
+    color: white;
 
-    max-width: 850px;
-
-    margin: 0 auto;
-}
-
-
-.contact-intro {
-
-    margin: 0 0 22px;
-
-    font-size: clamp(20px, 2.2vw, 30px);
+    font-size: 25px;
 
     line-height: 1.4;
 
     font-weight: 600;
+
+    text-align: center;
 }
 
 
-.contact-details {
+/* ---------- CONTACT ---------- */
 
+.site-footer-contact {
     display: flex;
 
     justify-content: center;
@@ -443,41 +427,38 @@ footer {
 
     gap: 12px;
 
-    font-size: 18px;
-
-    font-weight: 500;
+    margin-top: 0;
 }
 
 
-.contact-details a {
-
-    color: white;
+.site-footer-contact a {
+    color: white !important;
 
     text-decoration: none;
+
+    font-size: 18px;
+
+    font-weight: 500;
 
     transition: opacity 0.2s ease;
 }
 
 
-.contact-details a:hover {
-
+.site-footer-contact a:hover {
     opacity: 0.7;
-
 }
 
 
-.contact-details span {
+.site-footer-contact span {
+    color: white;
 
     opacity: 0.6;
 }
 
 
-/* -------------------------
-   SOCIAL ICONS
-------------------------- */
+/* ---------- SOCIAL ---------- */
 
-.icon {
-
+.site-footer-social {
     display: flex;
 
     justify-content: center;
@@ -490,8 +471,7 @@ footer {
 }
 
 
-.icon .c {
-
+.site-footer-social span {
     width: 52px;
 
     height: 52px;
@@ -502,39 +482,34 @@ footer {
 
     display: flex;
 
-    justify-content: center;
-
     align-items: center;
+
+    justify-content: center;
 
     cursor: pointer;
 
-    transition:
-        transform 0.25s ease,
-        background-color 0.25s ease;
+    transition: all 0.25s ease;
 }
 
 
-.icon .c i {
+.site-footer-social span i {
+    color: white;
 
     font-size: 23px;
-
-    color: white;
 }
 
 
-.icon .c:hover {
-
+.site-footer-social span:hover {
     transform: translateY(-5px);
 
-    background-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 
-/* -------------------------
-   BOTTOM
-------------------------- */
+/* ---------- COPYRIGHT ---------- */
 
-.footer-bottom {
+.site-footer-bottom {
+    width: 100%;
 
     max-width: 1100px;
 
@@ -543,81 +518,64 @@ footer {
     padding-top: 25px;
 
     border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+.site-footer-bottom p {
+    margin: 0 !important;
+
+    color: white;
+
+    font-size: 13px;
+
+    opacity: 0.7;
 
     text-align: center;
 }
 
 
-.footer-bottom p {
-
-    margin: 0;
-
-    font-size: 13px;
-
-    opacity: 0.7;
-}
-
-
-/* -------------------------
-   MOBILE
-------------------------- */
+/* ---------- MOBILE ---------- */
 
 @media (max-width: 700px) {
 
-    footer {
-
+    .site-footer {
         padding: 50px 20px 25px;
-
     }
 
 
-    .thanks {
-
-        padding: 25px 20px;
+    .site-footer-title {
+        padding: 25px 18px;
 
         margin-bottom: 50px;
 
         border-radius: 25px;
-
     }
 
 
-    .thanks h1 {
-
+    .site-footer-title h1 {
         font-size: 32px;
-
     }
 
 
-    .contact-intro {
-
+    .site-footer-intro {
         font-size: 20px;
-
     }
 
 
-    .contact-details {
-
+    .site-footer-contact {
         flex-direction: column;
 
         gap: 8px;
-
-        font-size: 16px;
-
     }
 
 
-    .contact-details span {
-
+    .site-footer-contact span {
         display: none;
-
     }
 
 
-    .footer-bottom {
-
+    .site-footer-bottom {
         margin-top: 40px;
-
     }
 
 }
