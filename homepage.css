@@ -45,90 +45,190 @@
     right: 50px;
     cursor: pointer;
 }
-.spider-mascot{
-    position: absolute;
-    right: 150px;
-    top: 20px;
-    width: 55px;
-    height: 55px;
-    cursor: pointer;
+    /* spider*/
+        /* Spider Mascot */
+
+.spider-mascot {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 80px;
+    height: 160px;
+
     z-index: 9999;
-    animation: spiderFloat 3s ease-in-out infinite;
+    cursor: pointer;
 }
 
-.spider-body{
+/* Hanging thread */
+
+.spider-thread {
     position: absolute;
-    width: 35px;
-    height: 35px;
-    background-color: #6E06F3;
-    border-radius: 50%;
-    left: 10px;
-    top: 12px;
+
+    top: 0;
+    left: 39px;
+
+    width: 2px;
+    height: 75px;
+
+    background-color: #141C3A;
 }
 
-.spider-eye{
-    position: absolute;
-    width: 7px;
-    height: 7px;
-    background-color: white;
-    border-radius: 50%;
-    top: 10px;
-}
+/* Spider */
 
-.eye-left{
-    left: 8px;
-}
+        .spider {
+            position: absolute;
 
-.eye-right{
-    right: 8px;
-}
+            top: 70px;
+            left: 15px;
 
-.spider-legs span{
-    position: absolute;
-    width: 22px;
-    height: 3px;
-    background-color: #6E06F3;
-    border-radius: 5px;
-}
+            width: 50px;
+            height: 50px;
 
-.spider-legs span:nth-child(1){
-    left: -2px;
-    top: 20px;
-    transform: rotate(25deg);
-}
+            animation: spiderSwing 3s ease-in-out infinite;
+        }
 
-.spider-legs span:nth-child(2){
-    left: -2px;
-    top: 35px;
-    transform: rotate(-25deg);
-}
+        /* Body */
 
-.spider-legs span:nth-child(3){
-    right: -2px;
-    top: 20px;
-    transform: rotate(-25deg);
-}
+        .spider-body {
+            position: absolute;
 
-.spider-legs span:nth-child(4){
-    right: -2px;
-    top: 35px;
-    transform: rotate(25deg);
-}
+            width: 35px;
+            height: 42px;
 
-@keyframes spiderFloat{
-    0%, 100%{
-        transform: translateY(0);
-    }
+            left: 8px;
+            top: 5px;
 
-    50%{
-        transform: translateY(6px);
-    }
-}
+            background-color: #141C3A;
 
-.spider-mascot:hover{
-    transform: scale(1.15);
-    animation: none;
-}
+            border-radius: 50%;
+        }
+
+        /* Purple head */
+
+        .spider-body::before {
+            content: "";
+
+            position: absolute;
+
+            width: 25px;
+            height: 25px;
+
+            left: 5px;
+            top: -8px;
+
+            background-color: #6E06F3;
+
+            border-radius: 50%;
+        }
+
+        /* Eye */
+
+        .spider-eye {
+            position: absolute;
+
+            width: 6px;
+            height: 6px;
+
+            left: 18px;
+            top: 14px;
+
+            background-color: white;
+
+            border-radius: 50%;
+
+            z-index: 2;
+        }
+
+        /* Spider legs */
+
+        .leg {
+            position: absolute;
+
+            width: 28px;
+            height: 3px;
+
+            background-color: #141C3A;
+
+            border-radius: 5px;
+        }
+
+        /* Left legs */
+
+        .leg1 {
+            left: -12px;
+            top: 12px;
+            transform: rotate(25deg);
+        }
+
+        .leg2 {
+            left: -15px;
+            top: 22px;
+            transform: rotate(5deg);
+        }
+
+        .leg3 {
+            left: -13px;
+            top: 32px;
+            transform: rotate(-20deg);
+        }
+
+        .leg4 {
+            left: -8px;
+            top: 40px;
+            transform: rotate(-40deg);
+        }
+
+        /* Right legs */
+
+        .leg5 {
+            right: -12px;
+            top: 12px;
+            transform: rotate(-25deg);
+        }
+
+        .leg6 {
+            right: -15px;
+            top: 22px;
+            transform: rotate(-5deg);
+        }
+
+        .leg7 {
+            right: -13px;
+            top: 32px;
+            transform: rotate(20deg);
+        }
+
+        .leg8 {
+            right: -8px;
+            top: 40px;
+            transform: rotate(40deg);
+        }
+
+        /* Hanging movement */
+
+        @keyframes spiderSwing {
+
+            0%, 100% {
+                transform: rotate(-3deg);
+            }
+
+            50% {
+                transform: rotate(3deg);
+            }
+
+        }
+
+        /* Hover */
+
+        .spider-mascot:hover .spider {
+            animation: none;
+            transform: scale(1.1);
+        }
+
+
+    /* spider*/
 /*Section2*/
 .container_skills{
     position: relative;
