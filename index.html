@@ -313,8 +313,20 @@
         window.location.href = "./atc.html";
     }
     function refreshSite() {
-        location.reload();
+    location.reload();
+}
+
+window.addEventListener("scroll", function () {
+
+    const spiderThread = document.querySelector(".spider-thread");
+
+    if (window.scrollY > 50) {
+        spiderThread.style.display = "none";
+    } else {
+        spiderThread.style.display = "block";
     }
+
+});
 </script>
 
 
