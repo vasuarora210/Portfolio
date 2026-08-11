@@ -15,6 +15,22 @@
 <header>
     <div class="nav">
         <a href="#"><img src="./img/logo.png" alt="" width="70px" height="70px" ></a>
+            <div class="spider-mascot" onclick="refreshSite()" title="Click me!">
+                <div class="spider-body">
+                    <div class="spider-eye eye-left"></div>
+                    <div class="spider-eye eye-right"></div>
+                </div>
+
+                <div class="spider-legs">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+
+
         <div class="resume" onclick="get_resume()">
             <div>Resume</div>
         </div>
@@ -275,6 +291,9 @@
     }
     function atc(){
         window.location.href = "./atc.html";
+    }
+    function refreshSite() {
+        location.reload();
     }
 </script>
 
