@@ -314,3 +314,310 @@
         flex-direction: column;
     }
 }
+
+/* =========================================
+   FOOTER / CONTACT
+========================================= */
+
+footer {
+    position: relative;
+
+    background: #7000ff;
+
+    padding: 70px 8% 35px;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+
+/* -------------------------
+   MAIN HEADING
+------------------------- */
+
+.thanks {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 70px;
+
+    padding: 32px 40px;
+
+    background: #151d3b;
+
+    border-radius: 35px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+
+.thanks h1 {
+    margin: 0;
+
+    font-size: clamp(32px, 4vw, 64px);
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    color: white;
+}
+
+
+/* -------------------------
+   FOOTER CONTENT
+------------------------- */
+
+.footer-content {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: 30px;
+}
+
+
+/* -------------------------
+   LOGO
+------------------------- */
+
+.footer-logo img {
+
+    width: 70px;
+
+    height: 70px;
+
+    object-fit: contain;
+
+    margin: 0;
+}
+
+
+/* -------------------------
+   CONTACT
+------------------------- */
+
+.contact {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+
+.contact-intro {
+
+    margin: 0 0 22px;
+
+    font-size: clamp(20px, 2.2vw, 30px);
+
+    line-height: 1.4;
+
+    font-weight: 600;
+}
+
+
+.contact-details {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    font-size: 18px;
+
+    font-weight: 500;
+}
+
+
+.contact-details a {
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: opacity 0.2s ease;
+}
+
+
+.contact-details a:hover {
+
+    opacity: 0.7;
+
+}
+
+
+.contact-details span {
+
+    opacity: 0.6;
+}
+
+
+/* -------------------------
+   SOCIAL ICONS
+------------------------- */
+
+.icon {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 10px;
+}
+
+
+.icon .c {
+
+    width: 52px;
+
+    height: 52px;
+
+    border: 1.5px solid white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease;
+}
+
+
+.icon .c i {
+
+    font-size: 23px;
+
+    color: white;
+}
+
+
+.icon .c:hover {
+
+    transform: translateY(-5px);
+
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+/* -------------------------
+   BOTTOM
+------------------------- */
+
+.footer-bottom {
+
+    max-width: 1100px;
+
+    margin: 55px auto 0;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+    text-align: center;
+}
+
+
+.footer-bottom p {
+
+    margin: 0;
+
+    font-size: 13px;
+
+    opacity: 0.7;
+}
+
+
+/* -------------------------
+   MOBILE
+------------------------- */
+
+@media (max-width: 700px) {
+
+    footer {
+
+        padding: 50px 20px 25px;
+
+    }
+
+
+    .thanks {
+
+        padding: 25px 20px;
+
+        margin-bottom: 50px;
+
+        border-radius: 25px;
+
+    }
+
+
+    .thanks h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .contact-intro {
+
+        font-size: 20px;
+
+    }
+
+
+    .contact-details {
+
+        flex-direction: column;
+
+        gap: 8px;
+
+        font-size: 16px;
+
+    }
+
+
+    .contact-details span {
+
+        display: none;
+
+    }
+
+
+    .footer-bottom {
+
+        margin-top: 40px;
+
+    }
+
+}
