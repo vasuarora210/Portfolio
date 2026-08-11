@@ -209,19 +209,11 @@
         background-size: cover;
     }
     #W3{
-        background-image: url("./img/To-Do.PNG");
-        background-size: cover;
-    }
-    #Blog{
-        background-image: url("./img/Blog-Website.PNG");
+        background-image: url("./img/vora.png");
         background-size: cover;
     }
     #atc{
         background-image: url("./img/atc.png");
-        background-size: cover;
-    }
-    #ts{
-        background-image: url("./img/timer.png");
         background-size: cover;
     }
     /*  */
