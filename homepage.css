@@ -316,26 +316,23 @@
 }
 
 /* =========================================================
-   PORTFOLIO FOOTER
+   FINAL FOOTER
    ========================================================= */
 
 .site-footer {
-
     width: 100%;
-
     box-sizing: border-box;
 
     background: #7000ff;
-
     color: white;
 
-    padding: 70px 8% 30px;
+    padding: 70px 8% 35px;
 
     text-align: center;
 
     position: relative;
 
-    overflow: hidden;
+    overflow: visible;
 }
 
 
@@ -344,12 +341,10 @@
    ========================================================= */
 
 .site-footer-title {
-
     width: 100%;
-
     max-width: 1200px;
 
-    margin: -150px auto 70px;
+    margin: 0 auto 10px;
 
     padding: 35px 30px;
 
@@ -361,25 +356,29 @@
 
     position: relative;
 
-    z-index: 2;
+    z-index: 10;
+
+    /*
+       This is the important part.
+       Move the banner visually upward.
+    */
+    transform: translateY(-150px);
 }
 
 
 .site-footer-title h1 {
+    margin: 0 !important;
+    padding: 0 !important;
 
-    margin: 0;
+    color: white !important;
 
-    padding: 0;
+    font-size: clamp(32px, 4vw, 60px) !important;
 
-    color: white;
+    line-height: 1.1 !important;
 
-    font-size: clamp(32px, 4vw, 60px);
+    font-weight: 700 !important;
 
-    line-height: 1.1;
-
-    font-weight: 700;
-
-    text-align: center;
+    text-align: center !important;
 }
 
 
@@ -388,12 +387,11 @@
    ========================================================= */
 
 .site-footer-content {
-
     width: 100%;
 
     max-width: 900px;
 
-    margin: 0 auto;
+    margin: -100px auto 0;
 
     display: flex;
 
@@ -412,82 +410,94 @@
    ========================================================= */
 
 .site-footer-logo {
+    width: 70px !important;
 
-    width: 65px !important;
+    height: 70px !important;
 
-    height: 65px !important;
+    max-width: 70px !important;
 
-    max-width: 65px;
+    object-fit: contain !important;
 
-    object-fit: contain;
-
-    display: block;
+    display: block !important;
 
     margin: 0 !important;
 
-    padding: 0;
+    padding: 0 !important;
 }
 
 
 /* =========================================================
-   CONTACT MESSAGE
+   CONTACT TEXT
    ========================================================= */
 
 .site-footer-intro {
+    margin: 10px 0 10px !important;
 
-    margin: 15px 0 5px !important;
+    padding: 0 !important;
 
-    padding: 0;
+    color: white !important;
 
-    color: white;
+    font-size: clamp(20px, 2.2vw, 28px) !important;
 
-    font-size: clamp(20px, 2.2vw, 28px);
+    line-height: 1.4 !important;
 
-    line-height: 1.4;
+    font-weight: 600 !important;
 
-    font-weight: 600;
-
-    text-align: center;
+    text-align: center !important;
 }
 
 
 /* =========================================================
-   CONTACT / SOCIAL ICONS
+   SOCIAL / CONTACT ICONS
    ========================================================= */
 
 .site-footer-social {
+    display: flex !important;
 
-    display: flex;
+    justify-content: center !important;
 
-    justify-content: center;
+    align-items: center !important;
 
-    align-items: center;
+    gap: 20px !important;
 
-    gap: 18px;
+    margin: 10px 0 0 !important;
 
-    margin-top: 10px;
+    padding: 0 !important;
 }
 
 
-/* Individual circle */
+/* THE CIRCLE */
 
 .site-footer-social a {
+    width: 58px !important;
 
-    width: 52px;
+    height: 58px !important;
 
-    height: 52px;
+    min-width: 58px !important;
 
-    border: 1.5px solid white;
+    min-height: 58px !important;
 
-    border-radius: 50%;
+    max-width: 58px !important;
 
-    display: flex;
+    max-height: 58px !important;
 
-    justify-content: center;
+    box-sizing: border-box !important;
 
-    align-items: center;
+    border: 2px solid white !important;
 
-    box-sizing: border-box;
+    border-radius: 50% !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    padding: 0 !important;
+
+    margin: 0 !important;
+
+    background: transparent !important;
 
     color: white !important;
 
@@ -495,47 +505,54 @@
 
     cursor: pointer;
 
-    transition:
-        transform 0.25s ease,
-        background-color 0.25s ease,
-        border-color 0.25s ease;
+    transition: all 0.25s ease !important;
 }
 
 
-/* Icon */
+/* THE ICON */
 
 .site-footer-social a i {
+    display: inline-block !important;
 
-    color: white;
+    width: auto !important;
 
-    font-size: 21px;
+    height: auto !important;
 
-    line-height: 1;
+    margin: 0 !important;
 
-    margin: 0;
+    padding: 0 !important;
 
-    padding: 0;
+    color: white !important;
+
+    font-size: 24px !important;
+
+    line-height: 1 !important;
+
+    text-align: center !important;
 }
 
 
-/* Hover */
+/* HOVER */
 
 .site-footer-social a:hover {
+    transform: translateY(-6px) !important;
 
-    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15) !important;
 
-    background-color: rgba(255, 255, 255, 0.15);
+    color: white !important;
+}
 
-    border-color: white;
+
+.site-footer-social a:hover i {
+    color: white !important;
 }
 
 
 /* =========================================================
-   BOTTOM / COPYRIGHT
+   BOTTOM
    ========================================================= */
 
 .site-footer-bottom {
-
     width: 100%;
 
     max-width: 1100px;
@@ -551,20 +568,19 @@
 
 
 .site-footer-bottom p {
-
     margin: 0 !important;
 
-    padding: 0;
+    padding: 0 !important;
 
-    color: white;
+    color: white !important;
 
-    font-size: 13px;
+    font-size: 13px !important;
 
-    line-height: 1.5;
+    line-height: 1.5 !important;
 
     opacity: 0.7;
 
-    text-align: center;
+    text-align: center !important;
 }
 
 
@@ -574,30 +590,12 @@
 
 @media (max-width: 900px) {
 
-    .site-footer {
-
-        padding-left: 5%;
-
-        padding-right: 5%;
-
-    }
-
-
     .site-footer-title {
-
-        margin-top: -120px;
-
-        margin-bottom: 60px;
-
-        padding: 30px 25px;
-
+        transform: translateY(-120px);
     }
 
-
-    .site-footer-title h1 {
-
-        font-size: 42px;
-
+    .site-footer-content {
+        margin-top: -80px;
     }
 
 }
@@ -610,101 +608,72 @@
 @media (max-width: 700px) {
 
     .site-footer {
-
-        padding: 50px 20px 25px;
-
+        padding: 60px 20px 30px;
     }
 
 
     .site-footer-title {
-
-        margin-top: -90px;
-
-        margin-bottom: 50px;
-
         padding: 25px 18px;
 
         border-radius: 25px;
 
+        transform: translateY(-100px);
     }
 
 
     .site-footer-title h1 {
+        font-size: 31px !important;
 
-        font-size: 31px;
-
-        line-height: 1.15;
-
+        line-height: 1.15 !important;
     }
 
 
     .site-footer-content {
+        margin-top: -70px;
 
         gap: 20px;
-
     }
 
 
     .site-footer-logo {
-
         width: 55px !important;
 
         height: 55px !important;
-
-        max-width: 55px;
-
     }
 
 
     .site-footer-intro {
-
-        font-size: 20px;
-
-        line-height: 1.4;
-
-        max-width: 500px;
-
+        font-size: 20px !important;
     }
 
 
     .site-footer-social {
-
-        gap: 14px;
-
-        margin-top: 8px;
-
+        gap: 14px !important;
     }
 
 
     .site-footer-social a {
+        width: 50px !important;
 
-        width: 48px;
+        height: 50px !important;
 
-        height: 48px;
+        min-width: 50px !important;
 
+        min-height: 50px !important;
+
+        max-width: 50px !important;
+
+        max-height: 50px !important;
     }
 
 
     .site-footer-social a i {
-
-        font-size: 19px;
-
+        font-size: 20px !important;
     }
 
 
     .site-footer-bottom {
-
         margin-top: 40px;
-
-        padding-top: 20px;
-
-    }
-
-
-    .site-footer-bottom p {
-
-        font-size: 11px;
-
     }
 
 }
