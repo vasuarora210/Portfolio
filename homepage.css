@@ -216,21 +216,20 @@
         background-image: url("./img/atc.png");
         background-size: cover;
     }
-    /*  */
-.project-description {
-    margin: 8px 0 10px;
+    .project-description {
+    margin: 0;
     font-size: 14px;
     line-height: 1.4;
     color: #555;
-
-    /* Prevent the description from changing card height */
-    height: 40px;
-    overflow: hidden;
+    text-align: left;
 
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
-}
+    overflow: hidden;
+    }
+    /*  */
 /* Footer */
 .footer{
     height: 80vh;
