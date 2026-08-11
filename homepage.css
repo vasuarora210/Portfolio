@@ -315,15 +315,18 @@
     }
 }
 
-/* ==========================================
-   NEW PORTFOLIO FOOTER
-   ========================================== */
+/* =========================================================
+   PORTFOLIO FOOTER
+   ========================================================= */
 
 .site-footer {
+
     width: 100%;
+
     box-sizing: border-box;
 
     background: #7000ff;
+
     color: white;
 
     padding: 70px 8% 30px;
@@ -331,44 +334,63 @@
     text-align: center;
 
     position: relative;
+
+    overflow: hidden;
 }
 
 
-/* ---------- TITLE ---------- */
+/* =========================================================
+   OVERLAPPING TITLE
+   ========================================================= */
 
 .site-footer-title {
+
     width: 100%;
+
     max-width: 1200px;
 
-    margin: 0 auto 70px;
+    margin: -150px auto 70px;
 
-    padding: 30px 25px;
+    padding: 35px 30px;
 
     box-sizing: border-box;
 
     background: #151d3b;
 
     border-radius: 35px;
+
+    position: relative;
+
+    z-index: 2;
 }
 
 
 .site-footer-title h1 {
+
     margin: 0;
+
+    padding: 0;
 
     color: white;
 
-    font-size: 55px;
+    font-size: clamp(32px, 4vw, 60px);
 
-    line-height: 1.15;
+    line-height: 1.1;
 
     font-weight: 700;
+
+    text-align: center;
 }
 
 
-/* ---------- CONTENT ---------- */
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
 
 .site-footer-content {
+
     width: 100%;
+
     max-width: 900px;
 
     margin: 0 auto;
@@ -385,26 +407,41 @@
 }
 
 
-/* ---------- LOGO ---------- */
+/* =========================================================
+   LOGO
+   ========================================================= */
 
 .site-footer-logo {
+
     width: 65px !important;
+
     height: 65px !important;
+
+    max-width: 65px;
 
     object-fit: contain;
 
+    display: block;
+
     margin: 0 !important;
+
+    padding: 0;
 }
 
 
-/* ---------- INTRO ---------- */
+/* =========================================================
+   CONTACT MESSAGE
+   ========================================================= */
 
 .site-footer-intro {
-    margin: 15px 0 0 !important;
+
+    margin: 15px 0 5px !important;
+
+    padding: 0;
 
     color: white;
 
-    font-size: 25px;
+    font-size: clamp(20px, 2.2vw, 28px);
 
     line-height: 1.4;
 
@@ -414,51 +451,12 @@
 }
 
 
-/* ---------- CONTACT ---------- */
-
-.site-footer-contact {
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-
-    margin-top: 0;
-}
-
-
-.site-footer-contact a {
-    color: white !important;
-
-    text-decoration: none;
-
-    font-size: 18px;
-
-    font-weight: 500;
-
-    transition: opacity 0.2s ease;
-}
-
-
-.site-footer-contact a:hover {
-    opacity: 0.7;
-}
-
-
-.site-footer-contact span {
-    color: white;
-
-    opacity: 0.6;
-}
-
-
-/* ---------- SOCIAL ---------- */
+/* =========================================================
+   CONTACT / SOCIAL ICONS
+   ========================================================= */
 
 .site-footer-social {
+
     display: flex;
 
     justify-content: center;
@@ -471,7 +469,10 @@
 }
 
 
-.site-footer-social span {
+/* Individual circle */
+
+.site-footer-social a {
+
     width: 52px;
 
     height: 52px;
@@ -482,33 +483,59 @@
 
     display: flex;
 
+    justify-content: center;
+
     align-items: center;
 
-    justify-content: center;
+    box-sizing: border-box;
+
+    color: white !important;
+
+    text-decoration: none !important;
 
     cursor: pointer;
 
-    transition: all 0.25s ease;
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease;
 }
 
 
-.site-footer-social span i {
+/* Icon */
+
+.site-footer-social a i {
+
     color: white;
 
-    font-size: 23px;
+    font-size: 21px;
+
+    line-height: 1;
+
+    margin: 0;
+
+    padding: 0;
 }
 
 
-.site-footer-social span:hover {
+/* Hover */
+
+.site-footer-social a:hover {
+
     transform: translateY(-5px);
 
-    background: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.15);
+
+    border-color: white;
 }
 
 
-/* ---------- COPYRIGHT ---------- */
+/* =========================================================
+   BOTTOM / COPYRIGHT
+   ========================================================= */
 
 .site-footer-bottom {
+
     width: 100%;
 
     max-width: 1100px;
@@ -518,15 +545,22 @@
     padding-top: 25px;
 
     border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+    box-sizing: border-box;
 }
 
 
 .site-footer-bottom p {
+
     margin: 0 !important;
+
+    padding: 0;
 
     color: white;
 
     font-size: 13px;
+
+    line-height: 1.5;
 
     opacity: 0.7;
 
@@ -534,48 +568,143 @@
 }
 
 
-/* ---------- MOBILE ---------- */
+/* =========================================================
+   TABLET
+   ========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
 
     .site-footer {
-        padding: 50px 20px 25px;
+
+        padding-left: 5%;
+
+        padding-right: 5%;
+
     }
 
 
     .site-footer-title {
-        padding: 25px 18px;
 
-        margin-bottom: 50px;
+        margin-top: -120px;
 
-        border-radius: 25px;
+        margin-bottom: 60px;
+
+        padding: 30px 25px;
+
     }
 
 
     .site-footer-title h1 {
-        font-size: 32px;
+
+        font-size: 42px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .site-footer {
+
+        padding: 50px 20px 25px;
+
+    }
+
+
+    .site-footer-title {
+
+        margin-top: -90px;
+
+        margin-bottom: 50px;
+
+        padding: 25px 18px;
+
+        border-radius: 25px;
+
+    }
+
+
+    .site-footer-title h1 {
+
+        font-size: 31px;
+
+        line-height: 1.15;
+
+    }
+
+
+    .site-footer-content {
+
+        gap: 20px;
+
+    }
+
+
+    .site-footer-logo {
+
+        width: 55px !important;
+
+        height: 55px !important;
+
+        max-width: 55px;
+
     }
 
 
     .site-footer-intro {
+
         font-size: 20px;
+
+        line-height: 1.4;
+
+        max-width: 500px;
+
     }
 
 
-    .site-footer-contact {
-        flex-direction: column;
+    .site-footer-social {
 
-        gap: 8px;
+        gap: 14px;
+
+        margin-top: 8px;
+
     }
 
 
-    .site-footer-contact span {
-        display: none;
+    .site-footer-social a {
+
+        width: 48px;
+
+        height: 48px;
+
+    }
+
+
+    .site-footer-social a i {
+
+        font-size: 19px;
+
     }
 
 
     .site-footer-bottom {
+
         margin-top: 40px;
+
+        padding-top: 20px;
+
+    }
+
+
+    .site-footer-bottom p {
+
+        font-size: 11px;
+
     }
 
 }
